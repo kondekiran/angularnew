@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -39,8 +39,8 @@ jobs:
       with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          application_name: sample-docker
-          environment_name: Sampledocker-env
-          version_label: "the-sample-docker-deployment-${{ steps.format-time.outputs.replaced }}"
+          application_name: Angularebs
+          environment_name: Angularebs-env
+          version_label: "the-Angularebs-deployment-${{ steps.format-time.outputs.replaced }}"
           region: us-east-1
           deployment_package: deploy.zip
